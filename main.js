@@ -8,6 +8,17 @@ const passwordInput = document.getElementById("password");
 const lockText = document.getElementById("lock-text");
 const feedback = document.getElementById("feedback");
 const hintElement = document.getElementById("hint");
+const butterfly = document.getElementById("butterfly");
+
+if (butterfly) {
+  lottie.loadAnimation({
+    container: butterfly,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "Animation - 1750191850501.json",
+  });
+}
 
 const combos = [
   {
@@ -28,10 +39,7 @@ const combos = [
   {
     passwords: ["zola", "Zola"],
     hint: "The Twitter stripper road trip.",
-
-    
   },
-
 
   {
     passwords: [
@@ -51,12 +59,9 @@ const combos = [
     hint: "The horror movie with prom and blood.",
   },
 
-
   {
     passwords: ["themenu", "TheMenu", "The Menu", "THE MENU"],
     hint: "The dinner that turned into a deadly tasting menu.",
-
-    
   },
   {
     passwords: ["anora", "Anora"],
@@ -64,23 +69,11 @@ const combos = [
   },
 
   {
-    passwords: [
-      "moxy",
-      "moxy nyc",
-      "the moxy",
-      "MOXY NYC",
-      "Moxy NYC",
-    ],
+    passwords: ["moxy", "moxy nyc", "the moxy", "MOXY NYC", "Moxy NYC"],
     hint: "The name of the hotel we stayed at in NYC.",
   },
   {
-    passwords: [
-      "october31",
-      "October 31",
-      "10/31",
-      "halloween",
-      "Halloween",
-    ],
+    passwords: ["october31", "October 31", "10/31", "halloween", "Halloween"],
     hint: 'The date of your "birthday" in Atlanta.',
   },
   {
@@ -95,13 +88,8 @@ const combos = [
     hint: "The type of tomato I could never get right.",
   },
   {
-    passwords: [
-      "sharkattacktv",
-      "shark attack tv",
-      "sharkattack tv",
-    ],
+    passwords: ["sharkattacktv", "shark attack tv", "sharkattack tv"],
     hint: "The name of your janky streaming site (what I called it).",
-
   },
 ];
 
