@@ -1,0 +1,26 @@
+body {
+  font-family: "Special Elite", "Courier New", monospace;
+  background-color: #f9eaea;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+button {
+  background: none;
+  border: 1px solid #333;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
