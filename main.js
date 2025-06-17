@@ -25,7 +25,11 @@ function unlock() {
   if (passwordInput.value === "blue") {
     feedback.classList.add("hidden");
     lockScreen.classList.add("fade-out");
+
+    content.classList.remove("hidden");
     content.classList.add("fade-in");
+    document.body.classList.remove("locked");
+
     setTimeout(() => {
       lockScreen.classList.add("hidden");
     }, 500);

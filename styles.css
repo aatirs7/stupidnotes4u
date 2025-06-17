@@ -6,6 +6,10 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+
+}
+
+body.locked {
   overflow: hidden;
 
 }
@@ -13,16 +17,24 @@ body {
 #lock-screen,
 #content {
 
-  height: 100vh;
 
+ 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+#lock-screen {
+  height: 100vh;
+}
+
 #content {
   opacity: 0;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+
 }
 
 #content.fade-in {
@@ -107,7 +119,6 @@ input {
 
 .hidden {
   display: none;
-
 
 }
 
