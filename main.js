@@ -57,6 +57,43 @@ const combos = [
     passwords: ["themenu", "TheMenu", "The Menu", "THE MENU"],
     hint: "The dinner that turned into a deadly tasting menu.",
   },
+  {
+    passwords: [
+      "moxy",
+      "moxy nyc",
+      "the moxy",
+      "MOXY NYC",
+      "Moxy NYC",
+    ],
+    hint: "The name of the hotel we stayed at in NYC.",
+  },
+  {
+    passwords: [
+      "october31",
+      "October 31",
+      "10/31",
+      "halloween",
+      "Halloween",
+    ],
+    hint: 'The date of your "birthday" in Atlanta.',
+  },
+  {
+    passwords: [
+      "prometheus",
+      "prometheus tomato",
+      "heirloom",
+      "heirloom tomato",
+    ],
+    hint: "The type of tomato I could never get right.",
+  },
+  {
+    passwords: [
+      "sharkattacktv",
+      "shark attack tv",
+      "sharkattack tv",
+    ],
+    hint: "The name of your janky streaming site (what I called it).",
+  },
 ];
 
 const currentCombo = combos[Math.floor(Math.random() * combos.length)];
