@@ -18,16 +18,21 @@ const combos = [
       "Its Whats Inside",
       "ITSWHATSINSIDE",
     ],
-    hint: "(Movie) The creepy dinner party we tried solving.",
+
+    hint: "The creepy dinner party we tried solving.",
   },
   {
     passwords: ["waves", "Waves"],
-    hint: "(Movie) Your favorite — and it’s the name of a Kanye song.",
+    hint: "Your favorite — and it’s the name of a Kanye song.",
   },
   {
     passwords: ["zola", "Zola"],
-    hint: "(Movie) The Twitter stripper road trip.",
+    hint: "The Twitter stripper road trip.",
+
+    
   },
+
+
   {
     passwords: [
       "thesubstance",
@@ -45,18 +50,19 @@ const combos = [
     passwords: ["carrie", "Carrie"],
     hint: "The horror movie with prom and blood.",
   },
+
+
   {
-    passwords: ["deepwater", "DeepWater", "Deep Water"],
-    hint: "(Movie) The one where Ben Aflec killed her lovers.",
+    passwords: ["themenu", "TheMenu", "The Menu", "THE MENU"],
+    hint: "The dinner that turned into a deadly tasting menu.",
+
+    
   },
   {
     passwords: ["anora", "Anora"],
     hint: "(Movie) The stripper, the Russians, and the ring that didn’t fit.",
   },
-  {
-    passwords: ["themenu", "TheMenu", "The Menu", "THE MENU"],
-    hint: "(Movie) The dinner that turned into a deadly tasting menu.",
-  },
+
   {
     passwords: [
       "moxy",
@@ -95,6 +101,7 @@ const combos = [
       "sharkattack tv",
     ],
     hint: "The name of your janky streaming site (what I called it).",
+
   },
 ];
 
