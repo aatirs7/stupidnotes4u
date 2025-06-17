@@ -18,15 +18,15 @@ const combos = [
       "Its Whats Inside",
       "ITSWHATSINSIDE",
     ],
-    hint: "Movie: The creepy dinner party we tried solving.",
+    hint: "(Movie) The creepy dinner party we tried solving.",
   },
   {
     passwords: ["waves", "Waves"],
-    hint: "Movie: Your favorite — and it’s the name of a Kanye song.",
+    hint: "(Movie) Your favorite — and it’s the name of a Kanye song.",
   },
   {
     passwords: ["zola", "Zola"],
-    hint: "Movie: The Twitter stripper road trip.",
+    hint: "(Movie) The Twitter stripper road trip.",
   },
   {
     passwords: [
@@ -47,15 +47,15 @@ const combos = [
   },
   {
     passwords: ["deepwater", "DeepWater", "Deep Water"],
-    hint: "Movie: The one where Ben Aflec killed her lovers.",
+    hint: "(Movie) The one where Ben Aflec killed her lovers.",
   },
   {
     passwords: ["anora", "Anora"],
-    hint: "Movie: The stripper, the Russians, and the ring that didn’t fit.",
+    hint: "(Movie) The stripper, the Russians, and the ring that didn’t fit.",
   },
   {
     passwords: ["themenu", "TheMenu", "The Menu", "THE MENU"],
-    hint: "Movie: The dinner that turned into a deadly tasting menu.",
+    hint: "(Movie) The dinner that turned into a deadly tasting menu.",
   },
   {
     passwords: [
