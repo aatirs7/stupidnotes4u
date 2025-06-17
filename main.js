@@ -2,6 +2,7 @@ const startButton = document.getElementById("start");
 const intro = document.getElementById("intro");
 const poem = document.getElementById("poem");
 
+
 const lockScreen = document.getElementById("lock-screen");
 const content = document.getElementById("content");
 const passwordInput = document.getElementById("password");
