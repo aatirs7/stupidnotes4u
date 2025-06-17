@@ -1,18 +1,24 @@
 body {
   font-family: "Special Elite", "Courier New", monospace;
+
   background: linear-gradient(#fceef3, #f8d7e4);
   color: #880e4f;
   text-align: center;
   margin: 0;
   padding: 0;
+
 }
 
 body.locked {
   overflow: hidden;
+
 }
 
 #lock-screen,
 #content {
+
+
+ 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,6 +34,7 @@ body.locked {
   padding: 2rem 1rem;
   min-height: 100vh;
   box-sizing: border-box;
+
 }
 
 #content.fade-in {
@@ -43,9 +50,11 @@ body.locked {
 
 input {
   border: none;
+
   border-bottom: 1px solid #d81b60;
   background: none;
   color: #880e4f;
+
   font-family: inherit;
   font-size: 1rem;
   padding: 0.5rem;
@@ -56,13 +65,16 @@ input {
 .hint {
   opacity: 0.6;
   color: #d81b60;
+
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }
 
 .message {
   margin-top: 0.5rem;
+
   color: #d81b60;
+
 }
 
 #lock-text::after {
@@ -107,19 +119,25 @@ input {
 
 .hidden {
   display: none;
+
 }
 
 h1 {
   font-size: 2rem;
+
   margin: 0 0 1.5rem;
+
   font-weight: normal;
 }
 
 button {
   background: none;
+
   border: 1px solid #d81b60;
   color: #880e4f;
+
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
 }
+

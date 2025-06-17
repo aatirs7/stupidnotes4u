@@ -1,6 +1,8 @@
 const startButton = document.getElementById("start");
 const intro = document.getElementById("intro");
 const poem = document.getElementById("poem");
+
+
 const lockScreen = document.getElementById("lock-screen");
 const content = document.getElementById("content");
 const passwordInput = document.getElementById("password");
@@ -23,9 +25,11 @@ function unlock() {
   if (passwordInput.value === "blue") {
     feedback.classList.add("hidden");
     lockScreen.classList.add("fade-out");
+
     content.classList.remove("hidden");
     content.classList.add("fade-in");
     document.body.classList.remove("locked");
+
     setTimeout(() => {
       lockScreen.classList.add("hidden");
     }, 500);
@@ -42,6 +46,7 @@ passwordInput.addEventListener("keydown", (e) => {
     unlock();
   }
 });
+
 
 startButton.addEventListener("click", () => {
   intro.classList.add("hidden");
