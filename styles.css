@@ -156,6 +156,7 @@ button {
 
 #butterfly {
   position: absolute;
+
   width: 120px;
   height: 120px;
   opacity: 0.7;
@@ -179,4 +180,5 @@ button {
   100% {
     transform: translate(-20vw, 10vh) rotate(360deg);
   }
+
 }
