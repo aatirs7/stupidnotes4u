@@ -1,10 +1,101 @@
 body {
   font-family: "Special Elite", "Courier New", monospace;
-  background-color: #f9eaea;
+
+  background-color: #fceef3;
   color: #333;
   text-align: center;
   margin: 0;
-  padding: 2rem;
+  padding: 0;
+}
+
+#lock-screen,
+#content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content {
+  opacity: 0;
+}
+
+#content.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+#lock-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #333;
+  background: none;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  outline: none;
+}
+
+.hint {
+  opacity: 0.6;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.message {
+  margin-top: 0.5rem;
+}
+
+#lock-text::after {
+  content: "";
+  display: inline-block;
+  width: 0.6ch;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+
+.hidden {
+  display: none;
+
 }
 
 h1 {
@@ -21,6 +112,3 @@ button {
   cursor: pointer;
 }
 
-.hidden {
-  display: none;
-}

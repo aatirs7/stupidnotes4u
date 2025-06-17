@@ -11,12 +11,22 @@
     />
   </head>
   <body>
-    <div id="intro">
-      <h1>some stupid notes 4 u</h1>
-      <button id="start">Start Reading</button>
+
+    <div id="lock-screen">
+      <p id="lock-text"></p>
+      <input id="password" type="password" autocomplete="off" />
+      <p class="hint">hint: the name of the Asian movie we watched</p>
+      <p id="feedback" class="message hidden"></p>
     </div>
-    <div id="poem" class="hidden">
-      <p>(first poem placeholder)</p>
+    <div id="content" class="hidden">
+      <div id="intro">
+        <h1>some stupid notes 4 u</h1>
+        <button id="start">Start Reading</button>
+      </div>
+      <div id="poem" class="hidden">
+        <p>(first poem placeholder)</p>
+      </div>
+
     </div>
     <script src="main.js"></script>
   </body>
