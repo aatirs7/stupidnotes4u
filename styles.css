@@ -24,11 +24,11 @@ body.locked {
 #content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;    /* push items to the top */
+  justify-content: flex-start; /* push items to the top */
   align-items: center;
-  height: 100vh;                   /* exactly full viewport */
-  box-sizing: border-box;          /* include padding in that 100vh */
-  padding: 2rem 1rem 0;            /* 2rem top, 1rem sides, no bottom */
+  height: 100vh; /* exactly full viewport */
+  box-sizing: border-box; /* include padding in that 100vh */
+  padding: 1rem 1rem 0; /* 1rem top, 1rem sides, no bottom */
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -78,14 +78,29 @@ input {
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  50.01%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-5px); }
-  40%, 80% { transform: translateX(5px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
 }
 
 .shake {
@@ -98,7 +113,7 @@ input {
 
 h1 {
   font-size: 2rem;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1rem;
   font-weight: normal;
 }
 
@@ -109,10 +124,4 @@ button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-}
-
-#butterfly {
-  width: 100%;
-  height: auto;
-  display: block;
 }
