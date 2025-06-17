@@ -1,6 +1,5 @@
 body {
   font-family: "Special Elite", "Courier New", monospace;
-
   background: linear-gradient(#fceef3, #f8d7e4);
   color: #880e4f;
   text-align: center;
@@ -12,28 +11,30 @@ body.locked {
   overflow: hidden;
 }
 
-#lock-screen,
-#content {
+/* LOCK SCREEN */
+#lock-screen {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#lock-screen {
   height: 100vh;
 }
 
+/* MAIN CONTENT */
 #content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;    /* push items to the top */
+  align-items: center;
+  height: 100vh;                   /* exactly full viewport */
+  box-sizing: border-box;          /* include padding in that 100vh */
+  padding: 2rem 1rem 0;            /* 2rem top, 1rem sides, no bottom */
   opacity: 0;
-  padding: 2rem 1rem;
-  min-height: 100vh;
-  box-sizing: border-box;
+  transition: opacity 0.5s ease;
 }
 
 #content.fade-in {
   opacity: 1;
-  transition: opacity 0.5s ease;
 }
 
 #lock-screen.fade-out {
@@ -44,11 +45,9 @@ body.locked {
 
 input {
   border: none;
-
   border-bottom: 1px solid #d81b60;
   background: none;
   color: #880e4f;
-
   font-family: inherit;
   font-size: 1rem;
   padding: 0.5rem;
@@ -59,14 +58,12 @@ input {
 .hint {
   opacity: 0.6;
   color: #d81b60;
-
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }
 
 .message {
   margin-top: 0.5rem;
-
   color: #d81b60;
 }
 
@@ -81,29 +78,14 @@ input {
 }
 
 @keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  50.01%,
-  100% {
-    opacity: 0;
-  }
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
 }
 
 @keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  20%,
-  60% {
-    transform: translateX(-5px);
-  }
-  40%,
-  80% {
-    transform: translateX(5px);
-  }
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
 }
 
 .shake {
@@ -116,18 +98,14 @@ input {
 
 h1 {
   font-size: 2rem;
-
   margin: 0 0 1.5rem;
-
   font-weight: normal;
 }
 
 button {
   background: none;
-
   border: 1px solid #d81b60;
   color: #880e4f;
-
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
