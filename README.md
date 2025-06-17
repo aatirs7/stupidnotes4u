@@ -1,0 +1,1 @@
+A digital poetry collection wrapped in memory and motion. somestupidnotes4u is an interactive site where each poem lives briefly—read, then burns away. But like all stories worth revisiting, you can always start from the beginning.
