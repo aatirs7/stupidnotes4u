@@ -80,6 +80,8 @@ const combos = [
   {
     passwords: [
       "prometheus",
+      "prometheous",
+      "prometheos",
       "prometheus tomato",
       "heirloom",
       "heirloom tomato",
