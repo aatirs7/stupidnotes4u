@@ -1,17 +1,18 @@
 const startButton = document.getElementById("start");
 const intro = document.getElementById("intro");
 const poem = document.getElementById("poem");
-
-const lockScreen = document.getElementById("lock-screen");
 const content = document.getElementById("content");
+const lockScreen = document.getElementById("lock-screen");
 const passwordInput = document.getElementById("password");
 const lockText = document.getElementById("lock-text");
 const feedback = document.getElementById("feedback");
 const hintElement = document.getElementById("hint");
 const butterflies = document.querySelectorAll(".butterfly");
 
+const homeHeading = document.querySelector("#intro h1"); // home page heading
+
 butterflies.forEach((el, index) => {
-  const delay = index * 500; // stagger by 2 seconds per butterfly
+  const delay = index * 500; // stagger by 500ms per butterfly
 
   setTimeout(() => {
     lottie.loadAnimation({
@@ -24,8 +25,6 @@ butterflies.forEach((el, index) => {
   }, delay);
 });
 
-
-// Load the new separate butterfly animation in its own container
 const newButterflyContainer = document.getElementById("butterfly-new");
 if (newButterflyContainer) {
   lottie.loadAnimation({
@@ -64,7 +63,7 @@ const combos = [
       "THE SUBSTANCE",
       "substance",
       "Substance",
-      "SUBSTANCE"
+      "SUBSTANCE",
     ],
     hint: "That gross movie where a pill changed everything.",
   },
@@ -77,7 +76,14 @@ const combos = [
     hint: "The horror movie with prom and blood.",
   },
   {
-    passwords: ["themenu", "TheMenu", "The Menu", "THE MENU","menu","MENU"],
+    passwords: [
+      "themenu",
+      "TheMenu",
+      "The Menu",
+      "THE MENU",
+      "menu",
+      "MENU",
+    ],
     hint: "(Movie) The dinner that turned into a deadly tasting menu.",
   },
   {
@@ -85,11 +91,23 @@ const combos = [
     hint: "(Movie) The stripper, the Russians, and the ring that didn’t fit.",
   },
   {
-    passwords: ["moxy", "moxy nyc", "the moxy", "MOXY NYC", "Moxy NYC"],
+    passwords: [
+      "moxy",
+      "moxy nyc",
+      "the moxy",
+      "MOXY NYC",
+      "Moxy NYC",
+    ],
     hint: "The name of the hotel we stayed at in NYC.",
   },
   {
-    passwords: ["october31", "October 31", "10/31", "halloween", "Halloween"],
+    passwords: [
+      "october31",
+      "October 31",
+      "10/31",
+      "halloween",
+      "Halloween",
+    ],
     hint: 'The date of your "birthday" in Atlanta.',
   },
   {
@@ -104,7 +122,11 @@ const combos = [
     hint: "The type of tomato I could never get right.",
   },
   {
-    passwords: ["sharkattacktv", "shark attack tv", "sharkattack tv"],
+    passwords: [
+      "sharkattacktv",
+      "shark attack tv",
+      "sharkattack tv",
+    ],
     hint: "The name of your janky streaming site (what I called it).",
   },
 ];
@@ -118,17 +140,26 @@ function normalize(str) {
   return str.toLowerCase().replace(/[^a-z0-9]/gi, "");
 }
 
-const message = "for Payal’s eyes only…";
-let index = 0;
-function type() {
-  if (index <= message.length) {
-    lockText.textContent = message.slice(0, index);
-    index++;
-    setTimeout(type, 80);
+const lockMessage = "for Payal’s eyes only…";
+let lockIndex = 0;
+function typeLock() {
+  if (lockIndex <= lockMessage.length) {
+    lockText.textContent = lockMessage.slice(0, lockIndex);
+    lockIndex++;
+    setTimeout(typeLock, 80);
   }
 }
+typeLock();
 
-type();
+const homeMessage = "some stupid notes 4 u";
+let homeIndex = 0;
+function typeHome() {
+  if (homeIndex <= homeMessage.length) {
+    homeHeading.textContent = homeMessage.slice(0, homeIndex);
+    homeIndex++;
+    setTimeout(typeHome, 80);
+  }
+}
 
 function unlock() {
   const entered = normalize(passwordInput.value);
@@ -143,6 +174,7 @@ function unlock() {
 
     setTimeout(() => {
       lockScreen.classList.add("hidden");
+      typeHome();
     }, 500);
   } else {
     feedback.textContent = "not quite \ud83d\udcad";
