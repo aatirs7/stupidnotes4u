@@ -161,8 +161,12 @@ button {
   width: 250px;
   height: 250px;
 
-  opacity: 0.7;
+  opacity: 1.0;
   pointer-events: none;
+  top: 0;
+  left: 0;
+  animation: flutter 30s linear infinite;
+
 }
 
 .butterfly1 {
@@ -204,83 +208,15 @@ button {
   }
   50% {
     transform: translate(80vw, 70vh) rotate(180deg);
+
+
   }
   75% {
     transform: translate(20vw, 80vh) rotate(270deg);
   }
   100% {
+
     transform: translate(10vw, 10vh) rotate(360deg);
-  }
-}
 
-@keyframes flutter2 {
-  0% {
-    transform: translate(20vw, 80vh) rotate(0deg);
-  }
-  25% {
-    transform: translate(30vw, 40vh) rotate(90deg);
-  }
-  50% {
-    transform: translate(70vw, 20vh) rotate(180deg);
-  }
-  75% {
-    transform: translate(90vw, 50vh) rotate(270deg);
-  }
-  100% {
-    transform: translate(20vw, 80vh) rotate(360deg);
-  }
-}
-
-@keyframes flutter3 {
-  0% {
-    transform: translate(70vw, 10vh) rotate(0deg);
-  }
-  25% {
-    transform: translate(40vw, 30vh) rotate(90deg);
-  }
-  50% {
-    transform: translate(10vw, 60vh) rotate(180deg);
-  }
-  75% {
-    transform: translate(50vw, 90vh) rotate(270deg);
-  }
-  100% {
-    transform: translate(70vw, 10vh) rotate(360deg);
-  }
-}
-
-@keyframes flutter4 {
-  0% {
-    transform: translate(30vw, 70vh) rotate(0deg);
-  }
-  25% {
-    transform: translate(80vw, 50vh) rotate(90deg);
-  }
-  50% {
-    transform: translate(60vw, 20vh) rotate(180deg);
-  }
-  75% {
-    transform: translate(40vw, 40vh) rotate(270deg);
-  }
-  100% {
-    transform: translate(30vw, 70vh) rotate(360deg);
-  }
-}
-
-@keyframes flutter5 {
-  0% {
-    transform: translate(50vw, 20vh) rotate(0deg);
-  }
-  25% {
-    transform: translate(70vw, 80vh) rotate(90deg);
-  }
-  50% {
-    transform: translate(30vw, 60vh) rotate(180deg);
-  }
-  75% {
-    transform: translate(10vw, 30vh) rotate(270deg);
-  }
-  100% {
-    transform: translate(50vw, 20vh) rotate(360deg);
   }
 }
