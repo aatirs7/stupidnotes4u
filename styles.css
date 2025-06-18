@@ -147,6 +147,11 @@ input::placeholder {
   display: none;
 }
 
+#timer {
+  margin-top: 1rem;
+  color: #d81b60;
+}
+
 h1 {
   font-size: 2rem;
   color: #d81b60;

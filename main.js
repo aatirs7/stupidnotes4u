@@ -138,7 +138,7 @@ function typeHome() {
   }
 }
 
-const poemMessage = `An Anklet’s Chime
+const poemList = `An Anklet’s Chime
 
 Field of Serenity
 
@@ -165,18 +165,58 @@ these aren’t perfect...
  instead.
 
 - Aatir`;
-let poemIndex = 0;
-function typePoem() {
-  if (poemIndex <= poemMessage.length) {
-    poemTextEl.textContent = poemMessage.slice(0, poemIndex);
-    poemIndex++;
-    setTimeout(typePoem, 80);
+
+const poems = [
+  `An Anklet’s Chime\n\nThe city keeps moving, the stars don’t mind,\nwe were for a moment, now left behind.\nWe met too soon or else too late,\na fleeting step, a twist of fate.\nPayal—just like an anklet’s chime,\nso soft, so ethereal, now lost with time.`,
+  `Field of Serenity\n\nTo be seen is to be loved.\nYou float through noise with quiet grace,\nunshaken by the hurried pace.\n\nTo be loved is to be seen.\nNo need to ask, no need to sway—\nyou choose your heart and walk your way.\n\nTo be seen is to be loved.\nThe world may chase, but you just be,\na light the world can’t help but see.\n\nTo be loved is to be seen.\nAnd I see you — serene and kind,\nwith a heart that grew what few could find,\na rare flower I still carry within mine.`,
+  `Lost in Atlanta\n\nAtlanta slowed down that night,\nthe lights felt soft, the air moved slow—\nlike the city sensed our shyness\nand held its breath.\nWe belonged anyway.\n\nThe night made space for us,\nroses in your lap,\na tiara catching light in soft display.\nThere was presence in your silence—\nnot needing to be seen, but to be felt.\nWe belonged anyway.\n\nIt was the kind of room,\nshimmering with elegance,\nwhere people walked with practiced ease,\nas if the world had always made room for them.\nWe hadn’t earned the room,\nyet we carried ourselves like we had.\nWe belonged anyway.\n\nWe smiled at things\nwe didn’t fully understand—\nquiet rituals, unspoken rules,\nthe choreography of a world not ours.\nWe shared glances when the world around us\nfelt a little too polished.\nBut nothing about us felt out of place.\nWe belonged anyway.\n\nWe didn’t blend in.\nWe didn’t need to.\nAnd somehow—\njust us,\njust then,\nwe belonged anyway.`,
+  `Act IV\n\nWe stopped counting after a while—\nnot the hours,\nnot the movies,\njust let the nights blur into dialogue and light.\n\nWe’d cue the movie at the same time—\nnever perfectly,\nbut close enough for the story to hold us.\nThe streams were borrowed,\nthe method a little off,\nbut nothing about our connection ever felt that way.\n\nWe kept our faces hidden,\nand somehow, that made it softer.\nOnly the sound of your voice\nthreading through mine like it belonged there.\nYou stayed with me\nwithout having to appear.\n\nNot seeing you made it easier to fall into everything else—\nthe story,\nthe space between us,\nthe mystery we always tried to solve.\n\nThe movie faded to black.\nThe call stayed.\nAnd for a while,\nso did we.`,
+  `Act V: Moxy NYC\n\nIt should’ve felt like more.\nThe city shimmered beneath us,\nManhattan stretched wide through the glass,\nlike we’d stepped into a scene—\nwhere even the quiet felt rehearsed.\n\nBut I kept checking the edges—\nstraightening the frame, measuring the moment\ninstead of living in it.\n\nWhile I adjusted every angle,\nafraid to let the moment breathe,\nyou just lived— the way you always do—\ngently, freely,\nuntouched by the weight I put on everything.\n\nAnd although we filled\nthe space with all the right things—\nglowing streets,\nrooms full of people I thought too much about,\nart that hung between us like silence.\n\nWe never truly found\nwhat came so easy\nin silence,\nin glowing screens,\nin the space between our voices.\n\nThe view faded,\nthe silence filled in,\nand on our way home,\nwe carried the same quiet question.`,
+  `In Fair Verona\n\nIn Fair Verona,\n I wrote myself into a role\n Romeo himself would envy.\nI didn’t see you as a lesson,\n or a muse,\n or some beautiful, flawed heroine\n in a story that was always about me.\nI saw you more like a wildflower—\n just out of reach,\n soft in your silence,\n never asking to be held.\nWhatever this was,\n whatever it still is—\n you went from a stranger\n to something like home,\n to someone I once crossed paths with,\n in Fair Verona,\n and never quite forgot.\nI’ll leave it the way Romeo and Juliet once did:\n“Parting is such sweet sorrow, that I shall say good night till it be morrow.”`,
+  `Gentle Goodbye\n\nYou said it gently,\nlike someone reaching the end\nof a story they loved but couldn’t finish.\n\nThat love, no matter how warm,\ncan’t live on distance alone.\n\nYou were tired,\nof holding hope like a secret\nof waiting for a closeness\nto arrive through a screen.\n\nI didn’t blame you.\nI heard it in your voice—\nthe weight of emotion stretched too thin\nacross a distance we couldn’t soften.\n\nMaybe you let go before I was ready to,\nbecause you knew what it would cost\nto keep holding on across a distance\nthat wouldn’t close.\n\nI just wish\nmy hand had been there\nwhen your heart let go.\nnot a voice,\nbut something you could hold.`,
+];
+
+function typeText(text, callback) {
+  let i = 0;
+  function type() {
+    if (i <= text.length) {
+      poemTextEl.textContent = text.slice(0, i);
+      i++;
+      setTimeout(type, 80);
+    } else if (callback) {
+      callback();
+    }
   }
+  type();
 }
 
-function showPoem() {
+function startCountdown(seconds, callback) {
+  const timerEl = document.getElementById("timer");
+  timerEl.classList.remove("hidden");
+  timerEl.textContent = seconds;
+  let remaining = seconds;
+  const interval = setInterval(() => {
+    remaining--;
+    timerEl.textContent = remaining;
+    if (remaining <= 0) {
+      clearInterval(interval);
+      timerEl.classList.add("hidden");
+      if (callback) callback();
+    }
+  }, 1000);
+}
+
+function showPoemList() {
   poem.classList.remove("hidden");
-  typePoem();
+  typeText(poemList, () => startCountdown(8, () => startPoems(0)));
+}
+
+function startPoems(index) {
+  if (index >= poems.length) return;
+  poemTextEl.textContent = "";
+  typeText(poems[index], () => {
+    setTimeout(() => startPoems(index + 1), 8000);
+  });
 }
 
 function unlock() {
@@ -193,7 +233,7 @@ function unlock() {
     setTimeout(() => {
       lockScreen.classList.add("hidden");
       typeHome();
-      setTimeout(showPoem, 3000);
+      setTimeout(showPoemList, 3000);
     }, 500);
   } else {
     feedback.textContent = "not quite \ud83d\udcad";
