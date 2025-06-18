@@ -11,7 +11,7 @@ const hintElement = document.getElementById("hint");
 const butterflies = document.querySelectorAll(".butterfly");
 
 butterflies.forEach((el, index) => {
-  const delay = index * 2000; // stagger by 2 seconds per butterfly
+  const delay = index * 500; // stagger by 2 seconds per butterfly
 
   setTimeout(() => {
     lottie.loadAnimation({
