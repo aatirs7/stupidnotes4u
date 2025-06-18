@@ -7,9 +7,15 @@ const lockText = document.getElementById("lock-text");
 const feedback = document.getElementById("feedback");
 const hintElement = document.getElementById("hint");
 const butterflies = document.querySelectorAll(".butterfly");
+const skipButton = document.getElementById("skip");
 
 const homeHeading = document.getElementById("home-heading"); // home page heading
 const poemTextEl = document.getElementById("poem-text");
+
+let typingInterval;
+let countdownInterval;
+let nextCallback = null;
+let currentPoemIndex = -1;
 
 butterflies.forEach((el, index) => {
   const delay = index * 500; // stagger by 500ms per butterfly
@@ -177,29 +183,34 @@ const poems = [
 ];
 
 function typeText(text, callback) {
+
+  clearInterval(typingInterval);
   let i = 0;
-  function type() {
-    if (i <= text.length) {
-      poemTextEl.textContent = text.slice(0, i);
-      i++;
-      setTimeout(type, 80);
-    } else if (callback) {
-      callback();
+  typingInterval = setInterval(() => {
+    poemTextEl.textContent = text.slice(0, i);
+    i++;
+    if (i > text.length) {
+      clearInterval(typingInterval);
+      if (callback) callback();
     }
-  }
-  type();
+  }, 80);
+
 }
 
 function startCountdown(seconds, callback) {
   const timerEl = document.getElementById("timer");
+
+  clearInterval(countdownInterval);
   timerEl.classList.remove("hidden");
   timerEl.textContent = seconds;
   let remaining = seconds;
-  const interval = setInterval(() => {
+  nextCallback = callback;
+  countdownInterval = setInterval(() => {
     remaining--;
     timerEl.textContent = remaining;
     if (remaining <= 0) {
-      clearInterval(interval);
+      clearInterval(countdownInterval);
+
       timerEl.classList.add("hidden");
       if (callback) callback();
     }
@@ -212,11 +223,25 @@ function showPoemList() {
 }
 
 function startPoems(index) {
+
+  currentPoemIndex = index;
   if (index >= poems.length) return;
   poemTextEl.textContent = "";
   typeText(poems[index], () => {
-    setTimeout(() => startPoems(index + 1), 8000);
+    startCountdown(8, () => startPoems(index + 1));
   });
+}
+
+function skipPoem() {
+  clearInterval(typingInterval);
+  clearInterval(countdownInterval);
+  document.getElementById("timer").classList.add("hidden");
+  if (nextCallback) {
+    const cb = nextCallback;
+    nextCallback = null;
+    cb();
+  }
+
 }
 
 function unlock() {
@@ -248,3 +273,7 @@ passwordInput.addEventListener("keydown", (e) => {
     unlock();
   }
 });
+
+if (skipButton) {
+  skipButton.addEventListener("click", skipPoem);
+}
