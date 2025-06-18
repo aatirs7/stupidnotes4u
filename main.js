@@ -193,7 +193,7 @@ function unlock() {
     setTimeout(() => {
       lockScreen.classList.add("hidden");
       typeHome();
-      setTimeout(showPoem, 8000);
+      setTimeout(showPoem, 3000);
     }, 500);
   } else {
     feedback.textContent = "not quite \ud83d\udcad";
