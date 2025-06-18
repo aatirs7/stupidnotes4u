@@ -394,6 +394,126 @@ pre {
   left: 85vw;
   animation: flutter5 31s linear infinite;
 }
+.butterfly31 {
+  top: 18vh;
+  left: 8vw;
+  animation: flutter1 29s linear infinite;
+}
+
+.butterfly32 {
+  top: 33vh;
+  left: 18vw;
+  animation: flutter2 32s linear infinite;
+}
+
+.butterfly33 {
+  top: 12vh;
+  left: 48vw;
+  animation: flutter3 27s linear infinite;
+}
+
+.butterfly34 {
+  top: 52vh;
+  left: 68vw;
+  animation: flutter4 30s linear infinite;
+}
+
+.butterfly35 {
+  top: 22vh;
+  left: 88vw;
+  animation: flutter5 33s linear infinite;
+}
+
+.butterfly36 {
+  top: 28vh;
+  left: 14vw;
+  animation: flutter1 31s linear infinite;
+}
+
+.butterfly37 {
+  top: 37vh;
+  left: 37vw;
+  animation: flutter2 28s linear infinite;
+}
+
+.butterfly38 {
+  top: 7vh;
+  left: 52vw;
+  animation: flutter3 35s linear infinite;
+}
+
+.butterfly39 {
+  top: 48vh;
+  left: 72vw;
+  animation: flutter4 29s linear infinite;
+}
+
+.butterfly40 {
+  top: 17vh;
+  left: 93vw;
+  animation: flutter5 31s linear infinite;
+}
+
+.butterfly41 {
+  top: 23vh;
+  left: 9vw;
+  animation: flutter1 30s linear infinite;
+}
+
+.butterfly42 {
+  top: 34vh;
+  left: 20vw;
+  animation: flutter2 33s linear infinite;
+}
+
+.butterfly43 {
+  top: 11vh;
+  left: 45vw;
+  animation: flutter3 28s linear infinite;
+}
+
+.butterfly44 {
+  top: 50vh;
+  left: 70vw;
+  animation: flutter4 34s linear infinite;
+}
+
+.butterfly45 {
+  top: 21vh;
+  left: 90vw;
+  animation: flutter5 32s linear infinite;
+}
+
+.butterfly46 {
+  top: 29vh;
+  left: 16vw;
+  animation: flutter1 27s linear infinite;
+}
+
+.butterfly47 {
+  top: 36vh;
+  left: 39vw;
+  animation: flutter2 35s linear infinite;
+}
+
+.butterfly48 {
+  top: 9vh;
+  left: 54vw;
+  animation: flutter3 30s linear infinite;
+}
+
+.butterfly49 {
+  top: 49vh;
+  left: 74vw;
+  animation: flutter4 33s linear infinite;
+}
+
+.butterfly50 {
+  top: 19vh;
+  left: 95vw;
+  animation: flutter5 29s linear infinite;
+}
+
 
 @keyframes flutter1 {
   0% {
