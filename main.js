@@ -10,15 +10,20 @@ const feedback = document.getElementById("feedback");
 const hintElement = document.getElementById("hint");
 const butterflies = document.querySelectorAll(".butterfly");
 
-butterflies.forEach((el) => {
-  lottie.loadAnimation({
-    container: el,
-    renderer: "svg",
-    loop: true,
-    autoplay: true,
-    path: "new butterfly animation.json",
-  });
+butterflies.forEach((el, index) => {
+  const delay = index * 2000; // stagger by 2 seconds per butterfly
+
+  setTimeout(() => {
+    lottie.loadAnimation({
+      container: el,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "new butterfly animation.json",
+    });
+  }, delay);
 });
+
 
 // Load the new separate butterfly animation in its own container
 const newButterflyContainer = document.getElementById("butterfly-new");
