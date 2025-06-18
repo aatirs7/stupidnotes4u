@@ -62,6 +62,9 @@ const combos = [
       "TheSubstance",
       "The Substance",
       "THE SUBSTANCE",
+      "substance",
+      "Substance",
+      "SUBSTANCE"
     ],
     hint: "That gross movie where a pill changed everything.",
   },
@@ -74,7 +77,7 @@ const combos = [
     hint: "The horror movie with prom and blood.",
   },
   {
-    passwords: ["themenu", "TheMenu", "The Menu", "THE MENU"],
+    passwords: ["themenu", "TheMenu", "The Menu", "THE MENU","menu","MENU"],
     hint: "(Movie) The dinner that turned into a deadly tasting menu.",
   },
   {
