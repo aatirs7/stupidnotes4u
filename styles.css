@@ -199,6 +199,67 @@ button {
   animation: flutter5 34s linear infinite;
 }
 
+.butterfly6 {
+  top: 25vh;
+  left: 10vw;
+  animation: flutter1 33s linear infinite;
+}
+
+.butterfly7 {
+  top: 5vh;
+  left: 60vw;
+  animation: flutter2 29s linear infinite;
+}
+
+.butterfly8 {
+  top: 30vh;
+  left: 80vw;
+  animation: flutter3 31s linear infinite;
+}
+
+.butterfly9 {
+  top: 40vh;
+  left: 15vw;
+  animation: flutter4 27s linear infinite;
+}
+
+.butterfly10 {
+  top: 20vh;
+  left: 70vw;
+  animation: flutter5 36s linear infinite;
+}
+
+.butterfly11 {
+  top: 50vh;
+  left: 5vw;
+  animation: flutter1 30s linear infinite;
+}
+
+.butterfly12 {
+  top: 45vh;
+  left: 40vw;
+  animation: flutter2 34s linear infinite;
+}
+
+.butterfly13 {
+  top: 60vh;
+  left: 55vw;
+  animation: flutter3 28s linear infinite;
+}
+
+.butterfly14 {
+  top: 55vh;
+  left: 75vw;
+  animation: flutter4 32s linear infinite;
+}
+
+.butterfly15 {
+  top: 65vh;
+  left: 90vw;
+  animation: flutter5 35s linear infinite;
+}
+
+
 @keyframes flutter1 {
   0% {
     transform: translate(10vw, 10vh) rotate(0deg);
