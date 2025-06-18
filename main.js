@@ -128,7 +128,7 @@ function typeLock() {
 }
 typeLock();
 
-const homeMessage = "some stupid notes 4u";
+const homeMessage = "$ome $tupid Note$ 4u...";
 let homeIndex = 0;
 function typeHome() {
   if (homeIndex <= homeMessage.length) {
@@ -151,6 +151,11 @@ Act V: Moxy NYC
 In Fair Verona
 
 Gentle Goodbye
+
+
+
+
+
 
 they aren’t perfect.
  just quiet things
