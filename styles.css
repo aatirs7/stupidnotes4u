@@ -175,6 +175,41 @@ button:hover {
   color: #f8d7e4;
 }
 
+#poem {
+  --burn-duration: 5s;
+  background: #fdf5ce;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0,
+    rgba(255, 255, 255, 0.1) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  padding: 2rem;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+#poem.burn {
+  animation: burn var(--burn-duration) forwards;
+}
+
+@keyframes burn {
+  0% {
+    clip-path: inset(0% 0% 0% 0%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(50% 50% 50% 50%);
+    opacity: 0;
+  }
+}
+
 .butterfly {
   position: absolute;
   z-index: 3;

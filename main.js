@@ -1,6 +1,7 @@
 const startButton = document.getElementById("start");
 const intro = document.getElementById("intro");
 const poem = document.getElementById("poem");
+const poemText = document.getElementById("poem-text");
 const content = document.getElementById("content");
 const lockScreen = document.getElementById("lock-screen");
 const passwordInput = document.getElementById("password");
@@ -108,6 +109,38 @@ const combos = [
   },
 ];
 
+const poems = [
+  "[An Anklet's Chime] (first poem placeholder)",
+  "(second poem placeholder)",
+  "(third poem placeholder)",
+];
+
+const displayTime = 30000;
+const burnDuration = 5000;
+let poemIndex = 0;
+
+function showPoem() {
+  poem.style.setProperty("--burn-duration", `${burnDuration}ms`);
+  poemText.textContent = poems[poemIndex];
+  poem.classList.remove("burn");
+  poem.classList.remove("hidden");
+
+  setTimeout(() => {
+    poem.classList.add("burn");
+    poem.addEventListener(
+      "animationend",
+      () => {
+        poem.classList.add("hidden");
+        poemIndex++;
+        if (poemIndex < poems.length) {
+          setTimeout(showPoem, 500);
+        }
+      },
+      { once: true },
+    );
+  }, displayTime);
+}
+
 const currentCombo = combos[Math.floor(Math.random() * combos.length)];
 if (hintElement) {
   hintElement.textContent = `hint: ${currentCombo.hint}`;
@@ -168,6 +201,8 @@ passwordInput.addEventListener("keydown", (e) => {
 });
 
 startButton.addEventListener("click", () => {
+  startButton.disabled = true;
   intro.classList.add("hidden");
-  poem.classList.remove("hidden");
+  poemIndex = 0;
+  showPoem();
 });
