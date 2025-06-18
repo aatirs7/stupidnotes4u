@@ -20,6 +20,18 @@ butterflies.forEach((el) => {
   });
 });
 
+// Load the new separate butterfly animation in its own container
+const newButterflyContainer = document.getElementById("butterfly-new");
+if (newButterflyContainer) {
+  lottie.loadAnimation({
+    container: newButterflyContainer,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "1750191850501.json",
+  });
+}
+
 const combos = [
   {
     passwords: [
@@ -29,7 +41,6 @@ const combos = [
       "Its Whats Inside",
       "ITSWHATSINSIDE",
     ],
-
     hint: "(Movie) The creepy dinner party we tried solving.",
   },
   {
@@ -40,7 +51,6 @@ const combos = [
     passwords: ["zola", "Zola"],
     hint: "(Movie) The Twitter stripper road trip.",
   },
-
   {
     passwords: [
       "thesubstance",
@@ -58,7 +68,6 @@ const combos = [
     passwords: ["carrie", "Carrie"],
     hint: "The horror movie with prom and blood.",
   },
-
   {
     passwords: ["themenu", "TheMenu", "The Menu", "THE MENU"],
     hint: "(Movie) The dinner that turned into a deadly tasting menu.",
@@ -67,7 +76,6 @@ const combos = [
     passwords: ["anora", "Anora"],
     hint: "(Movie) The stripper, the Russians, and the ring that didn’t fit.",
   },
-
   {
     passwords: ["moxy", "moxy nyc", "the moxy", "MOXY NYC", "Moxy NYC"],
     hint: "The name of the hotel we stayed at in NYC.",
