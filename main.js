@@ -30,15 +30,15 @@ const combos = [
       "ITSWHATSINSIDE",
     ],
 
-    hint: "The creepy dinner party we tried solving.",
+    hint: "(Movie) The creepy dinner party we tried solving.",
   },
   {
     passwords: ["waves", "Waves"],
-    hint: "Your favorite — and it’s the name of a Kanye song.",
+    hint: "(Movie) Your favorite — and it’s the name of a Kanye song.",
   },
   {
     passwords: ["zola", "Zola"],
-    hint: "The Twitter stripper road trip.",
+    hint: "(Movie) The Twitter stripper road trip.",
   },
 
   {
@@ -61,7 +61,7 @@ const combos = [
 
   {
     passwords: ["themenu", "TheMenu", "The Menu", "THE MENU"],
-    hint: "The dinner that turned into a deadly tasting menu.",
+    hint: "(Movie) The dinner that turned into a deadly tasting menu.",
   },
   {
     passwords: ["anora", "Anora"],
