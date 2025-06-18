@@ -103,6 +103,16 @@ input::placeholder {
   animation: blink 1s steps(1) infinite;
 }
 
+#home-heading::after {
+  content: "";
+  display: inline-block;
+  width: 0.6ch;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+
 @keyframes blink {
   0%,
   50% {
@@ -155,14 +165,15 @@ button {
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(216, 162, 180, 0.4);
   font-family: "Special Elite", monospace;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 button:hover {
   background-color: #d8a2b4;
   color: #f8d7e4;
 }
-
 
 .butterfly {
   position: absolute;
@@ -171,12 +182,11 @@ button:hover {
   width: 250px;
   height: 250px;
 
-  opacity: 1.0;
+  opacity: 1;
   pointer-events: none;
   top: 0;
   left: 0;
   animation: flutter 30s linear infinite;
-
 }
 
 .butterfly1 {
@@ -358,8 +368,6 @@ button:hover {
   left: 85vw;
   animation: flutter5 31s linear infinite;
 }
-
-
 
 @keyframes flutter1 {
   0% {

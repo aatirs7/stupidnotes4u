@@ -9,7 +9,7 @@ const feedback = document.getElementById("feedback");
 const hintElement = document.getElementById("hint");
 const butterflies = document.querySelectorAll(".butterfly");
 
-const homeHeading = document.querySelector("#intro h1"); // home page heading
+const homeHeading = document.getElementById("home-heading"); // home page heading
 
 butterflies.forEach((el, index) => {
   const delay = index * 500; // stagger by 500ms per butterfly
@@ -76,14 +76,7 @@ const combos = [
     hint: "The horror movie with prom and blood.",
   },
   {
-    passwords: [
-      "themenu",
-      "TheMenu",
-      "The Menu",
-      "THE MENU",
-      "menu",
-      "MENU",
-    ],
+    passwords: ["themenu", "TheMenu", "The Menu", "THE MENU", "menu", "MENU"],
     hint: "(Movie) The dinner that turned into a deadly tasting menu.",
   },
   {
@@ -91,23 +84,11 @@ const combos = [
     hint: "(Movie) The stripper, the Russians, and the ring that didn’t fit.",
   },
   {
-    passwords: [
-      "moxy",
-      "moxy nyc",
-      "the moxy",
-      "MOXY NYC",
-      "Moxy NYC",
-    ],
+    passwords: ["moxy", "moxy nyc", "the moxy", "MOXY NYC", "Moxy NYC"],
     hint: "The name of the hotel we stayed at in NYC.",
   },
   {
-    passwords: [
-      "october31",
-      "October 31",
-      "10/31",
-      "halloween",
-      "Halloween",
-    ],
+    passwords: ["october31", "October 31", "10/31", "halloween", "Halloween"],
     hint: 'The date of your "birthday" in Atlanta.',
   },
   {
@@ -122,11 +103,7 @@ const combos = [
     hint: "The type of tomato I could never get right.",
   },
   {
-    passwords: [
-      "sharkattacktv",
-      "shark attack tv",
-      "sharkattack tv",
-    ],
+    passwords: ["sharkattacktv", "shark attack tv", "sharkattack tv"],
     hint: "The name of your janky streaming site (what I called it).",
   },
 ];
