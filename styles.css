@@ -146,13 +146,23 @@ h1 {
 }
 
 button {
-  background: none;
-  border: 1px solid #d81b60;
+  background-color: #f8d7e4;
+  border: 1.5px solid #d8a2b4;
   color: #880e4f;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   font-size: 1rem;
   cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(216, 162, 180, 0.4);
+  font-family: "Special Elite", monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+button:hover {
+  background-color: #d8a2b4;
+  color: #f8d7e4;
+}
+
 
 .butterfly {
   position: absolute;
