@@ -154,20 +154,52 @@ button {
   cursor: pointer;
 }
 
-#butterfly {
+.butterfly {
   position: absolute;
   z-index: 3;
 
   width: 250px;
   height: 250px;
-  opacity: 0.7;
+
+  opacity: 1.0;
   pointer-events: none;
   top: 0;
   left: 0;
   animation: flutter 30s linear infinite;
+
 }
 
-@keyframes flutter {
+.butterfly1 {
+  top: 0;
+  left: 0;
+  animation: flutter1 30s linear infinite;
+}
+
+.butterfly2 {
+  top: 10vh;
+  left: -5vw;
+  animation: flutter2 35s linear infinite;
+}
+
+.butterfly3 {
+  top: -5vh;
+  left: 20vw;
+  animation: flutter3 32s linear infinite;
+}
+
+.butterfly4 {
+  top: 15vh;
+  left: 30vw;
+  animation: flutter4 28s linear infinite;
+}
+
+.butterfly5 {
+  top: -10vh;
+  left: 50vw;
+  animation: flutter5 34s linear infinite;
+}
+
+@keyframes flutter1 {
   0% {
     transform: translate(10vw, 10vh) rotate(0deg);
   }
@@ -176,11 +208,15 @@ button {
   }
   50% {
     transform: translate(80vw, 70vh) rotate(180deg);
+
+
   }
   75% {
     transform: translate(20vw, 80vh) rotate(270deg);
   }
   100% {
+
     transform: translate(10vw, 10vh) rotate(360deg);
+
   }
 }
