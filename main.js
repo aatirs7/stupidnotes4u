@@ -183,6 +183,7 @@ const poems = [
 ];
 
 function typeText(text, callback) {
+
   clearInterval(typingInterval);
   let i = 0;
   typingInterval = setInterval(() => {
@@ -193,10 +194,12 @@ function typeText(text, callback) {
       if (callback) callback();
     }
   }, 80);
+
 }
 
 function startCountdown(seconds, callback) {
   const timerEl = document.getElementById("timer");
+
   clearInterval(countdownInterval);
   timerEl.classList.remove("hidden");
   timerEl.textContent = seconds;
@@ -207,6 +210,7 @@ function startCountdown(seconds, callback) {
     timerEl.textContent = remaining;
     if (remaining <= 0) {
       clearInterval(countdownInterval);
+
       timerEl.classList.add("hidden");
       if (callback) callback();
     }
@@ -219,6 +223,7 @@ function showPoemList() {
 }
 
 function startPoems(index) {
+
   currentPoemIndex = index;
   if (index >= poems.length) return;
   poemTextEl.textContent = "";
@@ -236,6 +241,7 @@ function skipPoem() {
     nextCallback = null;
     cb();
   }
+
 }
 
 function unlock() {
