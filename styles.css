@@ -156,9 +156,10 @@ button {
 
 #butterfly {
   position: absolute;
+  z-index: 3;
 
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   opacity: 0.7;
   pointer-events: none;
   animation: flutter 30s linear infinite;
@@ -180,5 +181,4 @@ button {
   100% {
     transform: translate(-20vw, 10vh) rotate(360deg);
   }
-
 }
