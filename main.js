@@ -16,7 +16,7 @@ if (butterfly) {
     renderer: "svg",
     loop: true,
     autoplay: true,
-    path: "Animation - 1750191850501.json",
+    path: "new butterfly animation.json",
   });
 }
 
