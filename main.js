@@ -157,7 +157,7 @@ Gentle Goodbye
 
 
 
-they aren’t perfect.
+these aren’t perfect...
  just quiet things
  I didn’t know how to say
  while you were still listening.
