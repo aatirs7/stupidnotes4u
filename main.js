@@ -8,17 +8,17 @@ const passwordInput = document.getElementById("password");
 const lockText = document.getElementById("lock-text");
 const feedback = document.getElementById("feedback");
 const hintElement = document.getElementById("hint");
-const butterfly = document.getElementById("butterfly");
+const butterflies = document.querySelectorAll(".butterfly");
 
-if (butterfly) {
+butterflies.forEach((el) => {
   lottie.loadAnimation({
-    container: butterfly,
+    container: el,
     renderer: "svg",
     loop: true,
     autoplay: true,
     path: "new butterfly animation.json",
   });
-}
+});
 
 const combos = [
   {
