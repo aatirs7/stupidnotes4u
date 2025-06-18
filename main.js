@@ -1,4 +1,3 @@
-const startButton = document.getElementById("start");
 const intro = document.getElementById("intro");
 const poem = document.getElementById("poem");
 const content = document.getElementById("content");
@@ -10,6 +9,7 @@ const hintElement = document.getElementById("hint");
 const butterflies = document.querySelectorAll(".butterfly");
 
 const homeHeading = document.getElementById("home-heading"); // home page heading
+const poemTextEl = document.getElementById("poem-text");
 
 butterflies.forEach((el, index) => {
   const delay = index * 500; // stagger by 500ms per butterfly
@@ -128,7 +128,7 @@ function typeLock() {
 }
 typeLock();
 
-const homeMessage = "$ome $tupid Note$ 4U...";
+const homeMessage = "some stupid notes 4u";
 let homeIndex = 0;
 function typeHome() {
   if (homeIndex <= homeMessage.length) {
@@ -136,6 +136,42 @@ function typeHome() {
     homeIndex++;
     setTimeout(typeHome, 80);
   }
+}
+
+const poemMessage = `An Anklet’s Chime
+
+Field of Serenity
+
+Lost in Atlanta
+
+Act IV
+
+Act V: Moxy NYC
+
+In Fair Verona
+
+Gentle Goodbye
+
+they aren’t perfect.
+ just quiet things
+ I didn’t know how to say
+ while you were still listening.
+ so I wrote them down
+ instead.
+
+- Aatir`;
+let poemIndex = 0;
+function typePoem() {
+  if (poemIndex <= poemMessage.length) {
+    poemTextEl.textContent = poemMessage.slice(0, poemIndex);
+    poemIndex++;
+    setTimeout(typePoem, 80);
+  }
+}
+
+function showPoem() {
+  poem.classList.remove("hidden");
+  typePoem();
 }
 
 function unlock() {
@@ -152,6 +188,7 @@ function unlock() {
     setTimeout(() => {
       lockScreen.classList.add("hidden");
       typeHome();
+      setTimeout(showPoem, 8000);
     }, 500);
   } else {
     feedback.textContent = "not quite \ud83d\udcad";
@@ -165,9 +202,4 @@ passwordInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     unlock();
   }
-});
-
-startButton.addEventListener("click", () => {
-  intro.classList.add("hidden");
-  poem.classList.remove("hidden");
 });
