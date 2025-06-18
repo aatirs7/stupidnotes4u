@@ -173,106 +173,182 @@ button {
   top: 0;
   left: 0;
   animation: flutter1 30s linear infinite;
-  animation-delay: 0s;
 }
 
 .butterfly2 {
   top: 10vh;
   left: -5vw;
   animation: flutter2 35s linear infinite;
-  animation-delay: 3s;
 }
 
 .butterfly3 {
   top: -5vh;
   left: 20vw;
   animation: flutter3 32s linear infinite;
-  animation-delay: 6s;
 }
 
 .butterfly4 {
   top: 15vh;
   left: 30vw;
   animation: flutter4 28s linear infinite;
-  animation-delay: 9s;
 }
 
 .butterfly5 {
   top: -10vh;
   left: 50vw;
   animation: flutter5 34s linear infinite;
-  animation-delay: 12s;
 }
 
 .butterfly6 {
   top: 25vh;
   left: 10vw;
   animation: flutter1 33s linear infinite;
-  animation-delay: 15s;
 }
 
 .butterfly7 {
   top: 5vh;
   left: 60vw;
   animation: flutter2 29s linear infinite;
-  animation-delay: 18s;
 }
 
 .butterfly8 {
   top: 30vh;
   left: 80vw;
   animation: flutter3 31s linear infinite;
-  animation-delay: 21s;
 }
 
 .butterfly9 {
   top: 40vh;
   left: 15vw;
   animation: flutter4 27s linear infinite;
-  animation-delay: 24s;
 }
 
 .butterfly10 {
   top: 20vh;
   left: 70vw;
   animation: flutter5 36s linear infinite;
-  animation-delay: 27s;
 }
 
 .butterfly11 {
   top: 50vh;
   left: 5vw;
   animation: flutter1 30s linear infinite;
-  animation-delay: 30s;
 }
 
 .butterfly12 {
   top: 45vh;
   left: 40vw;
   animation: flutter2 34s linear infinite;
-  animation-delay: 33s;
 }
 
 .butterfly13 {
   top: 60vh;
   left: 55vw;
   animation: flutter3 28s linear infinite;
-  animation-delay: 36s;
 }
 
 .butterfly14 {
   top: 55vh;
   left: 75vw;
   animation: flutter4 32s linear infinite;
-  animation-delay: 39s;
 }
 
 .butterfly15 {
   top: 65vh;
   left: 90vw;
   animation: flutter5 35s linear infinite;
-  animation-delay: 42s;
 }
+
+.butterfly16 {
+  top: 12vh;
+  left: 5vw;
+  animation: flutter1 31s linear infinite;
+}
+
+.butterfly17 {
+  top: 35vh;
+  left: 22vw;
+  animation: flutter2 33s linear infinite;
+}
+
+.butterfly18 {
+  top: 8vh;
+  left: 42vw;
+  animation: flutter3 29s linear infinite;
+}
+
+.butterfly19 {
+  top: 50vh;
+  left: 65vw;
+  animation: flutter4 34s linear infinite;
+}
+
+.butterfly20 {
+  top: 15vh;
+  left: 85vw;
+  animation: flutter5 32s linear infinite;
+}
+
+.butterfly21 {
+  top: 25vh;
+  left: 12vw;
+  animation: flutter1 30s linear infinite;
+}
+
+.butterfly22 {
+  top: 38vh;
+  left: 35vw;
+  animation: flutter2 31s linear infinite;
+}
+
+.butterfly23 {
+  top: 42vh;
+  left: 58vw;
+  animation: flutter3 34s linear infinite;
+}
+
+.butterfly24 {
+  top: 55vh;
+  left: 78vw;
+  animation: flutter4 33s linear infinite;
+}
+
+.butterfly25 {
+  top: 62vh;
+  left: 95vw;
+  animation: flutter5 29s linear infinite;
+}
+
+.butterfly26 {
+  top: 10vh;
+  left: 7vw;
+  animation: flutter1 28s linear infinite;
+}
+
+.butterfly27 {
+  top: 45vh;
+  left: 28vw;
+  animation: flutter2 35s linear infinite;
+}
+
+.butterfly28 {
+  top: 5vh;
+  left: 50vw;
+  animation: flutter3 30s linear infinite;
+}
+
+.butterfly29 {
+  top: 40vh;
+  left: 75vw;
+  animation: flutter4 32s linear infinite;
+}
+
+.butterfly30 {
+  top: 60vh;
+  left: 85vw;
+  animation: flutter5 31s linear infinite;
+}
+
 
 
 @keyframes flutter1 {
