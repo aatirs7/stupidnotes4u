@@ -164,7 +164,7 @@ Gentle Goodbye
 
 
 these aren’t perfect...
- just quiet things
+ just quiet thoughts
  I didn’t know how to say
  while you were still listening.
  so I wrote them down
