@@ -128,7 +128,7 @@ function typeLock() {
 }
 typeLock();
 
-const homeMessage = "$ome $tupid Note$ 4 You...";
+const homeMessage = "$ome $tupid Note$ 4U...";
 let homeIndex = 0;
 function typeHome() {
   if (homeIndex <= homeMessage.length) {
