@@ -175,6 +175,23 @@ h1 {
   font-weight: normal;
 }
 
+#birthday-message {
+  font-size: 3rem;
+  color: #d81b60;
+  margin-top: 2rem;
+  font-weight: normal;
+}
+
+#birthday-message::after {
+  content: "";
+  display: inline-block;
+  width: 0.6ch;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+
 button {
   background-color: #f8d7e4;
   border: 1.5px solid #d8a2b4;
@@ -513,7 +530,6 @@ pre {
   left: 95vw;
   animation: flutter5 29s linear infinite;
 }
-
 
 @keyframes flutter1 {
   0% {

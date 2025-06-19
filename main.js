@@ -193,7 +193,28 @@ Aatir`;
 
 function showFinalMessage() {
   poemTextEl.textContent = "";
-  typeText(finalMessage);
+  typeText(finalMessage, showBirthdayMessage);
+}
+
+function showBirthdayMessage() {
+  const birthdayEl = document.getElementById("birthday-message");
+  if (birthdayEl) {
+    birthdayEl.classList.remove("hidden");
+    typeTextInElement(birthdayEl, "Happy Birthday Payal");
+  }
+}
+
+function typeTextInElement(el, text, callback) {
+  clearInterval(typingInterval);
+  let i = 0;
+  typingInterval = setInterval(() => {
+    el.textContent = text.slice(0, i);
+    i++;
+    if (i > text.length) {
+      clearInterval(typingInterval);
+      if (callback) callback();
+    }
+  }, 80);
 }
 
 function typeText(text, callback) {
