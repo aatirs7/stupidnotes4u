@@ -182,7 +182,14 @@ const poems = [
   `Gentle Goodbye\n\nYou said it gently,\nlike someone reaching the end\nof a story they loved but couldn’t finish.\n\nThat love, no matter how warm,\ncan’t live on distance alone.\n\nYou were tired,\nof holding hope like a secret\nof waiting for a closeness\nto arrive through a screen.\n\nI didn’t blame you.\nI heard it in your voice—\nthe weight of emotion stretched too thin\nacross a distance we couldn’t soften.\n\nMaybe you let go before I was ready to,\nbecause you knew what it would cost\nto keep holding on across a distance\nthat wouldn’t close.\n\nI just wish\nmy hand had been there\nwhen your heart let go.\nnot a voice,\nbut something you could hold.`,
 ];
 
-const finalMessage = "YOUR MESSAGE HERE";
+const finalMessage = `I know I've made it a habit of celebrating your birthday on the wrong day...
+
+But I've always believed in "better late than never."
+
+I hope you enjoyed this even half as much as I enjoyed making it.
+
+From your friend,
+Aatir`;
 
 function showFinalMessage() {
   poemTextEl.textContent = "";
