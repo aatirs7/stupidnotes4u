@@ -254,6 +254,15 @@ function skipPoem() {
     const cb = nextCallback;
     nextCallback = null;
     cb();
+  } else {
+    poemTextEl.textContent = "";
+    if (currentPoemIndex === -1) {
+      startPoems(0);
+    } else if (currentPoemIndex >= poems.length - 1) {
+      showFinalMessage();
+    } else {
+      startPoems(currentPoemIndex + 1);
+    }
   }
 }
 
