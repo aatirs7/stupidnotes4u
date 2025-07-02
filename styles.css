@@ -10,7 +10,7 @@ body {
   overflow-y: auto;
 }
 body {
-  font-size: 2.5rem; /* Increase from default 1rem (16px) to 1.25rem (20px) */
+  font-size: 2rem; /* Increase from default 1rem (16px) to 1.25rem (20px) */
 }
 body.locked {
   overflow: hidden;
@@ -111,12 +111,14 @@ input::placeholder {
 #home-heading::after {
   content: "";
   display: inline-block;
-  width: 0.6ch;
-  height: 1em;
+  width: 0.8ch;             /* Slightly wider cursor */
+  height: 1.2em;            /* Taller to match larger font */
   background-color: currentColor;
-  margin-left: 2px;
+  margin-left: 6px;         /* More spacing from text */
+  border-radius: 1px;       /* Rounded edge for a smoother cursor */
   animation: blink 1s steps(1) infinite;
 }
+
 
 @keyframes blink {
   0%,
