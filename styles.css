@@ -95,7 +95,7 @@ input::placeholder {
 }
 
 #lock-text {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 #lock-text::after {
@@ -111,8 +111,8 @@ input::placeholder {
 #home-heading::after {
   content: "";
   display: inline-block;
-  width: 0.8ch;             /* Slightly wider cursor */
-  height: 1.2em;            /* Taller to match larger font */
+  width: 0.5ch;             /* Slightly wider cursor */
+  height: 1em;            /* Taller to match larger font */
   background-color: currentColor;
   margin-left: 6px;         /* More spacing from text */
   border-radius: 1px;       /* Rounded edge for a smoother cursor */
