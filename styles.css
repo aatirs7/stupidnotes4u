@@ -118,6 +118,13 @@ input::placeholder {
   border-radius: 1px;       /* Rounded edge for a smoother cursor */
   animation: blink 1s steps(1) infinite;
 }
+#home-heading {
+  font-size: 4rem; /* or try 5rem, adjust as you like */
+  font-weight: normal;
+  color: #d81b60;
+  margin-top: 2rem;
+}
+
 
 
 @keyframes blink {
