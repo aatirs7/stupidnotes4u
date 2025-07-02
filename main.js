@@ -158,7 +158,6 @@ In Fair Verona
 
 Gentle Goodbye
 
-
  these aren’t perfect...
  just quiet thoughts
  I didn’t know how to say
